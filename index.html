@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Cantiknyaa Akuu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #2ecc71, #27ae60);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 90%;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Untuk Cantiknyaa Akuu 💚</h1>
+        <p>Sayangku, terima kasih udah selalu ada buat aku. Kamu adalah anugerah terindah dalam hidupku.</p>
+
+        <div class="slider">
+            <div class="slides">
+                <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1">
+                <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
+                <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3">
+            </div>
+        </div>
+
+        <p>Selalu ingat, aku sayang banget sama kamu, cantiknyaa akuu! 💕</p>
+    </div>
+
+    <footer>
+        <p>Dari aku, yang selalu mikirin kamu.</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector(".slides");
+        const totalSlides = slides.children.length;
+
+        function showNextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(showNextSlide, 3000); // Pindah slide setiap 3 detik
+    </script>
+</body>
+</html>
